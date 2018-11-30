@@ -35,8 +35,7 @@ function searchSpotify(searchItem) {
     var spotify = new Spotify(keys.spotify);
 
     if (searchVal === undefined) {
-        song = "The Sign"
-        console.log(song)
+        song = "Back in Black"
     } else {
         for (var i = 3; i < searchItem.length; i++) {
             if (i > 2 && i < searchItem.length) {
@@ -143,7 +142,6 @@ function concertSearch() {
 
     axios.get(queryUrl).then(
         function (response) {
-            // console.log(response.data);
             console.log("--------Venue-----------");
             console.log(response.data[0].venue.name);
 
